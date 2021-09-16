@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <style>
+        html {
+            text-align: center;
+        }
+
+        h1 {
+            padding-top: 32px;
+        }
+
+        .colorRed {
+            color: red;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        .myButton {
+            margin: 16px 0;
+        }
+
+        @media only screen and (max-width: 500px) {
+            #myTable {
+                font-size: 0.6rem;
+            }
+        }
+
+        @media only screen and (max-width: 320px) {
+            #myTable {
+                font-size: 0.45rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="container">
+    <h1>Class Marksheet</h1>
+    <form action="">
+        <div class="mb-3">
+            <input id="name" type="text" value="" class="form-control" placeholder="Họ tên" required>
+        </div>
+
+        <!-- form nhập thông tin điểm -->
+        <div class="row">
+            <div class="col">
+                <input id="toan" type="number" class="form-control" placeholder="Điểm toán" aria-label="Điểm toán"
+                    required>
+            </div>
+            <div class="col">
+                <input id="physical" type="number" class="form-control" placeholder="Điểm lý" aria-label="Điểm lý">
+            </div>
+            <div class="col">
+                <input id="chemitry" type="number" class="form-control" placeholder="Điểm hóa" aria-label="Điểm hóa">
+            </div>
+        </div>
+        
+
+        <input id="nhap" class="myButton" type="button" value="Nhập thông tin về điểm">
+    </form>
+
+    <!-- bảng in thông tin điểm -->
+    <div id="myTabDiv">
+        <table id="myTable" class="table table-bordered table-hover">
+            <tr>
+                <th>STT</th>
+                <th>Họ và tên</th>
+                <th>Toán</th>
+                <th>Lý</th>
+                <th>Hóa</th>
+                <
+                <th>Trung bình</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Hà Lò</td>
+                <td>8</td>
+                <td>6</td>
+                <td>6.5</td>
+                
+                <td>?</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sìn Cường</td>
+                <td>9</td>
+                <td>8.5</td>
+                <td>7</td>
+               
+                <td>?</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Quốc Cương</td>
+                <td>9</td>
+                <td>9.5</td>
+                <td>9</td>
+                
+                <td>?</td>
+            </tr>
+        </table>
+    </div>
+    <div class="myButton">
+        <button id="trungBinh">Tính điểm trung bình</button>
+        <button id="sinhGioi">Xác định học sinh giỏi</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
